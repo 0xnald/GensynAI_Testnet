@@ -45,21 +45,4 @@ python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh
 7. **Detach from `screen session`**
 - Use `Ctrl + A` and then press `D` to detach from this screen session.
 
- ## 🔄️ Back up `swarm.pem`
-After running the Gensyn node, it is essential to back up the swarm.pem file from your remote server (GPU or VPS) to your local PC. If you lose this file, your contribution will also be lost. Some GPU servers do not support SCP or SFTP, so I will provide distinct methods — one specifically for GPU servers and another for VPS.
-
-### 1. Back up `swarm.pem` from GPU server to local PC
-- For this, you must need to connect to GPU server using [SSH](https://github.com/zunxbt/gensyn-testnet?tab=readme-ov-file#-connect-via-ssh) (Recommened to do these stuffs on Command Prompt or Power Shell)
-- Now exit from this GPU server using this command
-```
-exit
-```
-- Now replace `SSH-COMMAND` in the below command with the command which your received from provider, then replace `YOUR-PC-PATH` where you want to download this swarm.pem file and then execute it on your Command prompt or Power shell
-```
-SSH-COMMAND "cat ~/rl-swarm/swarm.pem" > "YOUR-PC-PATH\swarm.pem"
-```
-- In my case, this command looks like this :
-```
-ssh -p 69 root@69.69.69.69 "cat ~/rl-swarm/swarm.pem" > "C:\Users\USER\Downloads\swarm.pem"
-```
-- Done, your `swarm.pem` file is now saved on your local system
+ 
